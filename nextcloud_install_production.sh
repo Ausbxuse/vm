@@ -45,7 +45,7 @@ debug_mode
 root_check
 
 # Test RAM size (2GB min) + CPUs (min 1)
-ram_check 2 Nextcloud
+#ram_check 2 Nextcloud
 cpu_check 1 Nextcloud
 
 # Check if dpkg or apt is running
