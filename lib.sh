@@ -587,7 +587,7 @@ calculate_php_fpm() {
 check_php
 
 # Minimum amount of max children (lower than this won't work with 2 GB RAM)
-min_max_children=5
+min_max_children=4
 # If start servers are lower than this then it's likely that there are room for max_spare_servers
 min_start_servers=20
 # Maximum amount of children is only set if the min_start_servers value are met
