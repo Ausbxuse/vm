@@ -587,7 +587,7 @@ calculate_php_fpm() {
 check_php
 
 # Minimum amount of max children (lower than this won't work with 2 GB RAM)
-min_max_children=8
+min_max_children=5
 # If start servers are lower than this then it's likely that there are room for max_spare_servers
 min_start_servers=20
 # Maximum amount of children is only set if the min_start_servers value are met
@@ -1028,6 +1028,7 @@ stop_if_installed() {
 if [ "$(dpkg-query -W -f='${Status}' "${1}" 2>/dev/null | grep -c "ok installed")" == "1" ]
 then
     print_text_in_color "$IRed" "${1} is installed, it must be a clean server."
+    exit 1
 fi
 }
 
