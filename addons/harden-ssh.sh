@@ -7,7 +7,7 @@ true
 SCRIPT_NAME="SSH Hardening"
 SCRIPT_EXPLAINER="This script hardens the SSH settings based on Lynis security check."
 # shellcheck source=lib.sh
-source /var/scripts/fetch_lib.sh || source <(curl -sL https://raw.githubusercontent.com/nextcloud/vm/master/lib.sh)
+source /var/scripts/fetch_lib.sh || source <(curl -sL https://raw.githubusercontent.com/ausbxuse/vm/master/lib.sh)
 
 # Check for errors + debug code and abort if something isn't right
 # 1 = ON
@@ -58,7 +58,7 @@ fi
 
 cat << SSH_CONF > "$SSH_CONF"
 # Implement Lynis suggestions
-# fix https://github.com/nextcloud/vm/issues/1873
+# fix https://github.com/ausbxuse/vm/issues/1873
 AllowTcpForwarding no
 ClientAliveCountMax 2
 Compression no

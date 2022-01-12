@@ -11,7 +11,7 @@ true
 SCRIPT_NAME="PN51 Network Drivers"
 SCRIPT_EXPLAINER="This installs the correct drivers for the 2.5GB LAN card in the PN51 ASUS"
 # shellcheck source=lib.sh
-source /var/scripts/fetch_lib.sh || source <(curl -sL https://raw.githubusercontent.com/nextcloud/vm/master/lib.sh)
+source /var/scripts/fetch_lib.sh || source <(curl -sL https://raw.githubusercontent.com/ausbxuse/vm/master/lib.sh)
 
 # Check for errors + debug code and abort if something isn't right
 # 1 = ON
@@ -57,7 +57,7 @@ fi
 # Download the driver before it's removed (no internet when it's removed)
 if [ ! -f "$INSTALLDIR"/r8125-"$RVERSION".tar.bz2 ]
 then
-    curl_to_dir https://github.com/nextcloud/vm/raw/master/network/asusnuc r8125-"$RVERSION".tar.bz2 "$INSTALLDIR"
+    curl_to_dir https://github.com/ausbxuse/vm/raw/master/network/asusnuc r8125-"$RVERSION".tar.bz2 "$INSTALLDIR"
 fi
 
 # Install latest driver

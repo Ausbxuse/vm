@@ -6,12 +6,12 @@
 
 # T&M Hansson IT AB © - 2021, https://www.hanssonit.se/
 # GNU General Public License v3.0
-# https://github.com/nextcloud/vm/blob/master/LICENSE
+# https://github.com/ausbxuse/vm/blob/master/LICENSE
 
 true
 SCRIPT_NAME="Nextcloud Update Script"
 # shellcheck source=lib.sh
-source <(curl -sL https://raw.githubusercontent.com/nextcloud/vm/master/lib.sh)
+source <(curl -sL https://raw.githubusercontent.com/ausbxuse/vm/master/lib.sh)
 
 # Get all needed variables from the library
 ncdb
@@ -58,7 +58,7 @@ If you are sure that no update or backup is currently running, you can fix this 
 fi
 
 # Change from APCu to Redis for local cache
-# https://github.com/nextcloud/vm/pull/2040
+# https://github.com/ausbxuse/vm/pull/2040
 if pecl list | grep apcu >/dev/null 2>&1
 then
     sed -i "/memcache.local/d" "$NCPATH"/config/config.php
@@ -317,7 +317,7 @@ if asuspn51
 then
     # Upgrade Realtek drivers
     print_text_in_color "$ICyan" "Upgrading Realtek firmware..."
-    curl_to_dir https://raw.githubusercontent.com/nextcloud/vm/master/network/asusnuc pn51.sh "$SCRIPTS"
+    curl_to_dir https://raw.githubusercontent.com/ausbxuse/vm/master/network/asusnuc pn51.sh "$SCRIPTS"
     bash "$SCRIPTS"/pn51.sh
 fi
 
@@ -394,7 +394,7 @@ then
     check_command phpenmod -v ALL redis
 fi
 
-# Remove APCu https://github.com/nextcloud/vm/issues/2039
+# Remove APCu https://github.com/ausbxuse/vm/issues/2039
 if is_this_installed "php$PHPVER"-dev
 then
     # Delete PECL APCu
@@ -523,7 +523,7 @@ fi
 # individually depending on which docker containers that exist.
 if is_docker_running
 then
-    # To fix https://github.com/nextcloud/vm/issues/1459 we need to remove Watchtower
+    # To fix https://github.com/ausbxuse/vm/issues/1459 we need to remove Watchtower
     # to avoid updating Bitwarden again, and only update the specified docker images above
     if docker ps -a --format '{{.Names}}' | grep -Eq "bitwarden";
     then
@@ -869,7 +869,7 @@ then
 fi
 
 # Prevent apps from breaking the update due to incompatibility
-# Fixes errors like https://github.com/nextcloud/vm/issues/1834
+# Fixes errors like https://github.com/ausbxuse/vm/issues/1834
 # Needs to be executed before backing up the config directory
 if [ "${CURRENTVERSION%%.*}" -lt "${NCVERSION%%.*}" ]
 then

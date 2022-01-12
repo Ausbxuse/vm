@@ -13,7 +13,7 @@
 true
 SCRIPT_NAME="Change to ZFS Mount Generator"
 # shellcheck source=lib.sh
-source /var/scripts/fetch_lib.sh || source <(curl -sL https://raw.githubusercontent.com/nextcloud/vm/master/lib.sh)
+source /var/scripts/fetch_lib.sh || source <(curl -sL https://raw.githubusercontent.com/ausbxuse/vm/master/lib.sh)
 
 # Check if root
 root_check
@@ -23,7 +23,7 @@ check_distro_version
 check_multiverse
 
 # Import if missing and export again to import it with UUID
-# https://github.com/nextcloud/vm/blob/master/lib.sh#L1233
+# https://github.com/ausbxuse/vm/blob/master/lib.sh#L1233
 # Set a different name for the pool (if used outside of this repo)
 # export POOLNAME=ncdata
 zpool_import_if_missing

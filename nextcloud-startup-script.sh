@@ -2,7 +2,7 @@
 
 # T&M Hansson IT AB © - 2021, https://www.hanssonit.se/
 # GNU General Public License v3.0
-# https://github.com/nextcloud/vm/blob/master/LICENSE
+# https://github.com/ausbxuse/vm/blob/master/LICENSE
 
 #########
 
@@ -124,7 +124,7 @@ Please note: It's not recommended to run a server on Wi-Fi; using an ethernet ca
 Please contact us for support:
 https://shop.hanssonit.se/product/premium-support-per-30-minutes/
 
-Please also post this issue on: https://github.com/nextcloud/vm/issues"
+Please also post this issue on: https://github.com/ausbxuse/vm/issues"
         exit 1
         fi
 else
@@ -133,7 +133,7 @@ else
 Please contact us for support:
 https://shop.hanssonit.se/product/premium-support-per-30-minutes/
 
-Please also post this issue on: https://github.com/nextcloud/vm/issues"
+Please also post this issue on: https://github.com/ausbxuse/vm/issues"
     exit 1
 fi
 
@@ -445,7 +445,7 @@ then
 and here's the reason: https://github.com/nextcloud/server/issues/13099"
 fi
 
-# Fixes https://github.com/nextcloud/vm/issues/58
+# Fixes https://github.com/ausbxuse/vm/issues/58
 a2dismod status
 restart_webserver
 
@@ -577,7 +577,7 @@ or buy a yearly subscription from Nextcloud:
 - SUBSCRIPTION: https://shop.hanssonit.se/product/nextcloud-enterprise-license-100-users/
 
 BUGS:
-Please report any bugs here: https://github.com/nextcloud/vm/issues"
+Please report any bugs here: https://github.com/ausbxuse/vm/issues"
 
 msg_box "### PLEASE HIT OK TO REBOOT ###
 

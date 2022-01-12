@@ -7,7 +7,7 @@ SCRIPT_NAME="Preview Generator"
 SCRIPT_EXPLAINER="This script will install the Preview Generator. 
 It can speedup the loading of previews in Nextcloud a lot."
 # shellcheck source=lib.sh
-source /var/scripts/fetch_lib.sh || source <(curl -sL https://raw.githubusercontent.com/nextcloud/vm/master/lib.sh)
+source /var/scripts/fetch_lib.sh || source <(curl -sL https://raw.githubusercontent.com/ausbxuse/vm/master/lib.sh)
 
 # Check for errors + debug code and abort if something isn't right
 # 1 = ON
@@ -110,7 +110,7 @@ The currently supported filetypes are:
 msg_box "IMPORTANT NOTE!!
 
 Imagick will put your server at risk as it's is known to have several flaws.
-You can check this issue to understand why: https://github.com/nextcloud/vm/issues/743
+You can check this issue to understand why: https://github.com/ausbxuse/vm/issues/743
 
 Please note: If you choose not to install imagick, it will get removed now."
 if yesno_box_no "Do you want to install imagick?"

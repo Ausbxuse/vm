@@ -8,7 +8,7 @@ then
 true
 SCRIPT_NAME="Static IP"
 # shellcheck source=lib.sh
-source /var/scripts/fetch_lib.sh || source <(curl -sL https://raw.githubusercontent.com/nextcloud/vm/master/lib.sh)
+source /var/scripts/fetch_lib.sh || source <(curl -sL https://raw.githubusercontent.com/ausbxuse/vm/master/lib.sh)
  # If we have internet, then use the latest variables from the lib remote file
 elif [ -f /var/scripts/lib.sh ]
 then
@@ -19,7 +19,7 @@ source /var/scripts/lib.sh
 else
     printf "You don't seem to have a working internet connection, and \
 /var/scripts/lib.sh is missing so you can't run this script."
-    printf "Please report this to https://github.com/nextcloud/vm/issues/"
+    printf "Please report this to https://github.com/ausbxuse/vm/issues/"
     exit 1
 fi
 

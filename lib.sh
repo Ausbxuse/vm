@@ -2,7 +2,7 @@
 
 # T&M Hansson IT AB © - 2021, https://www.hanssonit.se/
 # GNU General Public License v3.0
-# https://github.com/nextcloud/vm/blob/master/LICENSE
+# https://github.com/ausbxuse/vm/blob/master/LICENSE
 
 true
 # see https://github.com/koalaman/shellcheck/wiki/Directive
@@ -85,7 +85,7 @@ Confirm by pressing [ENTER]. Cancel by pressing [ESC]."
 MENU_GUIDE="Navigate with the [ARROW] keys and confirm by pressing [ENTER]. Cancel by pressing [ESC]."
 RUN_LATER_GUIDE="You can view this script later by running 'sudo bash $SCRIPTS/menu.sh'."
 # Repo
-GITHUB_REPO="https://raw.githubusercontent.com/nextcloud/vm/master"
+GITHUB_REPO="https://raw.githubusercontent.com/ausbxuse/vm/master"
 STATIC="$GITHUB_REPO/static"
 LETS_ENC="$GITHUB_REPO/lets-encrypt"
 APP="$GITHUB_REPO/apps"
@@ -98,7 +98,7 @@ VAGRANT_DIR="$GITHUB_REPO/vagrant"
 NOT_SUPPORTED_FOLDER="$GITHUB_REPO/not-supported"
 GEOBLOCKDAT="$GITHUB_REPO/geoblockdat"
 NCREPO="https://download.nextcloud.com/server/releases"
-ISSUES="https://github.com/nextcloud/vm/issues"
+ISSUES="https://github.com/ausbxuse/vm/issues"
 # User information
 NCPASS=nextcloud
 NCUSER=ncadmin
@@ -365,7 +365,7 @@ something is wrong here. Please report this to $ISSUES"
 # Used in geoblock.sh
 get_newest_dat_files() {
     # IPv4
-    IPV4_NAME=$(curl -s https://github.com/nextcloud/vm/tree/master/geoblockdat \
+    IPV4_NAME=$(curl -s https://github.com/ausbxuse/vm/tree/master/geoblockdat \
     | grep -oP '202[0-9]-[01][0-9]-Maxmind-Country-IPv4\.dat' | sort -r | head -1)
     if [ -z "$IPV4_NAME" ]
     then
@@ -391,7 +391,7 @@ get_newest_dat_files() {
         fi
     fi
     # IPv6
-    IPV6_NAME=$(curl -s https://github.com/nextcloud/vm/tree/master/geoblockdat \
+    IPV6_NAME=$(curl -s https://github.com/ausbxuse/vm/tree/master/geoblockdat \
     | grep -oP '202[0-9]-[01][0-9]-Maxmind-Country-IPv6\.dat' | sort -r | head -1)
     if [ -z "$IPV6_NAME" ]
     then
@@ -709,7 +709,7 @@ then
     if ! nslookup github.com
     then
         msg_box "Network is NOT OK. You must have a working network connection to run this script.
-If you think that this is a bug, please report it to https://github.com/nextcloud/vm/issues."
+If you think that this is a bug, please report it to https://github.com/ausbxuse/vm/issues."
         return 1
     fi
 fi
@@ -887,7 +887,7 @@ https://letsencrypt.readthedocs.org/en/latest/index.html
 Please check the guide for further information on how to enable TLS.
 
 This script is developed on GitHub, feel free to contribute:
-https://github.com/nextcloud/vm"
+https://github.com/ausbxuse/vm"
 
 if [ -n "$2" ]
 then
@@ -1723,7 +1723,7 @@ fi
 }
 
 # Check if the value is a number
-# EXAMPLE: https://github.com/nextcloud/vm/pull/1012
+# EXAMPLE: https://github.com/ausbxuse/vm/pull/1012
 check_if_number() {
 case "${1}" in
     ''|*[!0-9]*) return 1 ;;

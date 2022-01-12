@@ -2,7 +2,7 @@
 
 # T&M Hansson IT AB © - 2021, https://www.hanssonit.se/
 # GNU General Public License v3.0
-# https://github.com/nextcloud/vm/blob/master/LICENSE
+# https://github.com/ausbxuse/vm/blob/master/LICENSE
 
 # Prefer IPv4 for apt
 echo 'Acquire::ForceIPv4 "true";' >> /etc/apt/apt.conf.d/99force-ipv4
@@ -33,7 +33,7 @@ SCRIPT_NAME="Nextcloud Install Script"
 SCRIPT_EXPLAINER="This script is installing all requirements that are needed for Nextcloud to run.
 It's the first of two parts that are necessary to finish your customized Nextcloud installation."
 # shellcheck source=lib.sh
-source <(curl -sL https://raw.githubusercontent.com/nextcloud/vm/master/lib.sh)
+source <(curl -sL https://raw.githubusercontent.com/ausbxuse/vm/master/lib.sh)
 
 # Check for errors + debug code and abort if something isn't right
 # 1 = ON
@@ -622,7 +622,7 @@ echo "igbinary.compact_strings=On"
 restart_webserver
 fi
 
-# Fix https://github.com/nextcloud/vm/issues/714
+# Fix https://github.com/ausbxuse/vm/issues/714
 print_text_in_color "$ICyan" "Optimizing Nextcloud..."
 yes | nextcloud_occ db:convert-filecache-bigint
 nextcloud_occ db:add-missing-indices
@@ -926,7 +926,7 @@ if asuspn51
 then
     # Upgrade Realtek drivers
     print_text_in_color "$ICyan" "Upgrading Realtek firmware..."
-    curl_to_dir https://raw.githubusercontent.com/nextcloud/vm/master/network/asusnuc pn51.sh "$SCRIPTS"
+    curl_to_dir https://raw.githubusercontent.com/ausbxuse/vm/master/network/asusnuc pn51.sh "$SCRIPTS"
     bash "$SCRIPTS"/pn51.sh
 fi
 
