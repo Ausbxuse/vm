@@ -1028,7 +1028,6 @@ stop_if_installed() {
 if [ "$(dpkg-query -W -f='${Status}' "${1}" 2>/dev/null | grep -c "ok installed")" == "1" ]
 then
     print_text_in_color "$IRed" "${1} is installed, it must be a clean server."
-    exit 1
 fi
 }
 
